@@ -31,9 +31,10 @@ const Home = () => {
         </tr>
       </thead>
       <tbody>
+        {console.warn(users)}
         {users.map((user, index) => (
              <tr key={index}>
-             <td>{user.id}</td>
+             <td>{parseInt(user.id)}</td>
              <td>{user.name}</td>
              <td>{user.email}</td>
              <td>

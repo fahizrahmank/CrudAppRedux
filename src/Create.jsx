@@ -12,12 +12,12 @@ function Create() {
    const reff = useRef(null)
    const nav = useNavigate()
 
-   const users = useSelector((state) => state.users)
+  //  const users = useSelector((state) => state.users)
    const dispatch = useDispatch()
    const submitHandle = () => { 
     const userName = reff.current.username.value;
     const userEmail = reff.current.useremail.value;
-    dispatch(addUser({id:users[users.length-1].id + 1,email:userEmail,name:userName}))
+    dispatch(addUser({name:userName, email:userEmail, id: parseInt(Math.random() * 9999)}))
     nav('/')
 
   }
